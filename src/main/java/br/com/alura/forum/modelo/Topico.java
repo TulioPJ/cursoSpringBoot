@@ -1,9 +1,12 @@
 package br.com.alura.forum.modelo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Topico {
 
 	private Long id;
@@ -15,7 +18,7 @@ public class Topico {
 	private Curso curso;
 	private List<Resposta> respostas = new ArrayList<>();
 
-	public Topico(String titulo, String mensagem, Curso curso) {
+	public Topico(String titulo, String mensagem, Curso curso)  {
 		this.titulo = titulo;
 		this.mensagem = mensagem;
 		this.curso = curso;

@@ -1,5 +1,9 @@
 package br.com.alura.forum.modelo;
 
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Curso {
 
 	private Long id;
